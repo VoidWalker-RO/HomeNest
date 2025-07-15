@@ -1,11 +1,67 @@
 body {
+  background-color: #252525;
+  color: #CFCFCF;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  color: #0d6efd;
+a {
+  color: #CFCFCF;
+  text-decoration: none;
+}
+a:hover {
+  color: #7D7D7D;
+  text-decoration: underline;
+}
+
+.navbar {
+  background-color: #545454 !important;
+}
+
+.navbar-brand, .nav-link {
+  color: #CFCFCF !important;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #7D7D7D !important;
+}
+
+.card {
+  background-color: #545454;
+  color: #CFCFCF;
+  border: none;
+  box-shadow: 0 4px 8px rgba(125, 125, 125, 0.3);
+}
+
+.card-img-top {
+  border-bottom: 1px solid #7D7D7D;
+}
+
+h1, h5 {
+  color: #CFCFCF;
+}
+
+ul.list-unstyled li {
+  color: #CFCFCF;
 }
 
 footer {
-  width: 100%;
+  background-color: #545454;
+  color: #CFCFCF;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+.btn-primary {
+  background-color: #7D7D7D;
+  border-color: #7D7D7D;
+  color: #CFCFCF;
+}
+.btn-primary:hover {
+  background-color: #CFCFCF;
+  color: #252525;
+  border-color: #CFCFCF;
 }
