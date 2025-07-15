@@ -53,6 +53,7 @@ footer {
   text-align: center;
   padding: 1rem 0;
   margin-top: 2rem;
+  border-top: 1px solid #7D7D7D;
 }
 
 .btn-primary {
@@ -60,8 +61,26 @@ footer {
   border-color: #7D7D7D;
   color: #CFCFCF;
 }
+
 .btn-primary:hover {
   background-color: #CFCFCF;
   color: #252525;
   border-color: #CFCFCF;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #252525;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #7D7D7D;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #CFCFCF;
 }
