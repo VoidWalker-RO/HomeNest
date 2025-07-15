@@ -1,0 +1,13 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  color: #0d6efd;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
