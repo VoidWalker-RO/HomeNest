@@ -48,12 +48,13 @@ ul.list-unstyled li {
 }
 
 footer {
-  background-color: #545454;
+  background-color: #252525;
   color: #CFCFCF;
   text-align: center;
   padding: 1rem 0;
   margin-top: 2rem;
   border-top: 1px solid #7D7D7D;
+  box-shadow: 0 -2px 5px rgba(125, 125, 125, 0.5);
 }
 
 .btn-primary {
