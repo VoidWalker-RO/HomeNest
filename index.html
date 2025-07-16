@@ -37,6 +37,11 @@
   <main class="container mt-4">
     <h1 class="mb-4">Квартири для оренди</h1>
 
+    <div class="mb-4">
+  <label for="priceFilter" class="form-label">Шукати квартири до (грн/міс.)</label>
+  <input type="number" id="priceFilter" class="form-control" placeholder="Введіть бажану вартість" min="0" />
+</div>
+
     <div class="mb-4 d-flex flex-wrap gap-3">
   <button class="btn btn-secondary" onclick="filterByRooms(1)">1 кімната</button>
   <button class="btn btn-secondary" onclick="filterByRooms(2)">2 кімнати</button>
@@ -232,19 +237,46 @@
   <script src="js/themeToggle.js"></script>
   <script>
 function filterByRooms(rooms) {
+  const maxPrice = parseInt(document.getElementById('priceFilter').value, 10);
+
   document.querySelectorAll('.card').forEach(card => {
     const title = card.querySelector('.card-title').textContent;
-    if (title.includes(`${rooms}-кімнатна`) || title.includes(`${rooms} кімнатна`) || title.includes(`${rooms} кімнати`)) {
-      card.parentElement.style.display = 'block';
-    } else {
-      card.parentElement.style.display = 'none';
-    }
+    const priceText = card.querySelector('li').textContent;
+    const priceMatch = priceText.match(/Ціна:\s*(\d+)/);
+    const price = priceMatch ? parseInt(priceMatch[1], 10) : Infinity;
+
+    const isRoomMatch = title.includes(`${rooms}-кімнатна`) ||
+                        title.includes(`${rooms} кімнатна`) ||
+                        title.includes(`${rooms} кімнати`);
+
+    const isPriceMatch = isNaN(maxPrice) || price <= maxPrice;
+
+    card.parentElement.style.display = (isRoomMatch && isPriceMatch) ? 'block' : 'none';
   });
 }
 
 function showAll() {
   document.querySelectorAll('.card').forEach(card => {
     card.parentElement.style.display = 'block';
+  });
+}
+</script>
+<script>
+document.getElementById('priceFilter').addEventListener('keydown', function (event) {
+  if (event.key === 'Enter') {
+    filterByPriceOnly();
+  }
+});
+
+function filterByPriceOnly() {
+  const maxPrice = parseInt(document.getElementById('priceFilter').value, 10);
+
+  document.querySelectorAll('.card').forEach(card => {
+    const priceText = card.querySelector('li').textContent;
+    const priceMatch = priceText.match(/Ціна:\s*(\d+)/);
+    const price = priceMatch ? parseInt(priceMatch[1], 10) : Infinity;
+
+    card.parentElement.style.display = isNaN(maxPrice) || price <= maxPrice ? 'block' : 'none';
   });
 }
 </script>
