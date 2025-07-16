@@ -185,3 +185,99 @@ body.light-theme footer {
   transform: scale(1.05);
   opacity: 0.9;
 }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1e1e2f;
+  color: #bfbfbf;
+  margin: 0;
+  padding: 0;
+}
+
+body.light-theme {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+h1, h5 {
+  color: #dcdcdc;
+  font-weight: 700;
+}
+
+body.light-theme h1,
+body.light-theme h5 {
+  color: #222222;
+}
+
+a {
+  color: #3399ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #66ccff;
+  text-decoration: underline;
+}
+
+body.light-theme a {
+  color: #0055aa;
+}
+
+.card {
+  background-color: #2a2a3d;
+  color: #bfbfbf;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 102, 204, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 102, 204, 0.5);
+}
+
+body.light-theme .card {
+  background-color: #f9f9f9;
+  color: #333333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  border: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  color: #fff;
+}
+
+.navbar {
+  background-color: #222238 !important;
+}
+
+body.light-theme .navbar {
+  background-color: #f0f0f0 !important;
+}
+
+footer {
+  background-color: #222238;
+  color: #bbb;
+}
+
+body.light-theme footer {
+  background-color: #f0f0f0;
+  color: #444444;
+}
+
+ul.list-unstyled li {
+  color: #aaa;
+}
+
+body.light-theme ul.list-unstyled li {
+  color: #444444;
+}
